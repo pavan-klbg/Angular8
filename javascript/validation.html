@@ -1,0 +1,24 @@
+<form name= "reg" id="reg"  onsubmit="return validate()">
+
+    <label for="first">First Name: </label>
+    <input id="first" name="first" type="text" value="">
+
+   
+    <input type="submit" ></button>
+</form> 
+
+
+<Script>
+function validate(){
+    var formIsValid = true;
+    var first=document.forms["reg"]["first"];
+    if(first.value == null || first.value == "" ){   
+        first.style.borderColor = "red";
+       // alert("field cannot be empty")
+        formIsValid = false;    
+    }
+
+    return formIsValid;
+
+}
+</Script>
